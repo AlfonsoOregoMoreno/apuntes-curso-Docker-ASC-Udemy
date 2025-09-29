@@ -2,16 +2,13 @@
 ### (Udemy - Antonio Sánchez Corbalán)
 
 ## DIA 1 de 5
-`docker info` 
+`docker info`  
+(en el cliente muestra cosas como: plugins, ...)  
+(en el server muestra cosas como: containers, imágenes, URL del Registry, ...)  
 
-(en el cliente muestra cosas como: plugins, ...) 
+`docker run debian:bullseye`  
 
-(en el server muestra cosas como: containers, imágenes, URL del Registry, ...)
-
-`docker run debian:bullseye`
-
-**NOTA:** versiones --> "contenedor:tag"
-
+**NOTA:** versiones --> "contenedor:tag"  
 **NOTA:** ver en la Doc el caso de (slim) "Image Variant". p.e.: debian:<suite>-slim 
 
 `docker ps` (y "docker ps -a") 
