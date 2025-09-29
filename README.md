@@ -22,3 +22,23 @@ Imágenes descargadas.
 **DUDA:** cómo cambiar el Registry al que se apunta. 
 
 ### **Asignar nombres y hacerlos interactivos** 
+`docker run -it debian bash`  
+
+**NOTA:** los SSOO de los containers no son completos. Podemos comprobar que le faltarán muchos comandos/paquetes.  
+
+`docker run -it --name miconten debian bash`  
+
+### **Dejar en 2º plan, obtener info; ayuda y stop** 
+`docker run -d httpd` (Apache)  
+`docker inspect <hash>` (info en JSON) 
+`docker inspect <nombre>`  
+
+`docker stop <hash | nombre>`  
+
+`docker --help`  
+
+`docker <comando> --help` 
+> Ej.: `docker run --help` 
+
+
+
