@@ -8,6 +8,7 @@
 
 (en el server muestra cosas como: containers, imágenes, URL del Registry, ...)
 
+
 `docker run debian:bullseye`
 
 **NOTA:** versiones --> "contenedor:tag"
