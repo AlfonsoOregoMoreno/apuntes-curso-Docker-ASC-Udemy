@@ -28,7 +28,7 @@ Imágenes descargadas.
 
 `docker run -it --name miconten debian bash`  
 
-### **Dejar en 2º plan, obtener info; ayuda y stop** 
+### Dejar en 2º plan, obtener info; ayuda y stop 
 `docker run -d httpd` (Apache)  
 `docker inspect <hash>` (info en JSON) 
 `docker inspect <nombre>`  
