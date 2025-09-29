@@ -61,10 +61,10 @@ Imágenes descargadas.
 
 
 ### Ejecutar programas en el contenedor 
-`docker exec <ID> bash` (OJO, requiere que se esté ejecutando) 
-`docker run -di debian` (detached e intractivo) 
-`docker exec <ID> uname -a` (ejecuta el comando "uname -a") 
-`docker exec -it <ID> bash` (ejecuta bash en el container y entra al terminal) 
+`docker exec <ID> bash` (OJO, requiere que se esté ejecutando)  
+`docker run -di debian` (detached e intractivo)  
+`docker exec <ID> uname -a` (ejecuta el comando "uname -a")  
+`docker exec -it <ID> bash` (ejecuta bash en el container y entra al terminal)  
 
 
 ### Copiar datos al container y viceversa 
