@@ -17,8 +17,7 @@ Containers en ejecución y (-a) los ya terminados tb.
 `docker images` 
 Imágenes descargadas. 
 
-**NOTA / DUDA:** ¿cómo elegir una versión concreta de debian (p.e.)? Es decir, con más detalle que solo "debian:buster". 
-
+**NOTA / DUDA:** ¿cómo elegir una versión concreta de debian (p.e.)? Es decir, con más detalle que solo "debian:buster".
 **DUDA:** cómo cambiar el Registry al que se apunta. 
 
 
@@ -36,8 +35,9 @@ Imágenes descargadas.
 `docker inspect <nombre>`  
 `docker stop <hash | nombre>`  
 `docker --help`  
-`docker <comando> --help` 
-> Ej.: `docker run --help`  
+`docker <comando> --help`  
+> Ej.: `docker run --help`
+
 **NOTA:** revisar las opciones que brindan los comandos. 
 
 
@@ -47,9 +47,10 @@ Imágenes descargadas.
 `docker ps -q` (los hashes)  
 `docker ps -s` (sizes)  
 `docker ps -f` (filtro; ¡¡Ver la Doc!!) 
-> Ej.: `docker ps -f "name=a"` (contiene una "a" en el nombre)  
+> Ej.: `docker ps -f "name=a"` (contiene una "a" en el nombre) 
+
 `docker ps -f "image=http"` (¡¡OJO!! esto dio error)  
-`docker ps --format "{{.ID}}:{{.Command}}"` (formateo; ID y Command son campos/columnas; Ojo con la doble llave; Ver la Doc) 
+`docker ps --format "{{.ID}}:{{.Command}}"` (formateo; ID y Command son campos/columnas; Ojo con la doble llave; Ver la Doc)  
 (podemos poner "table" antes de las 2 primeras llaves para que salgan las cabeceras)  
 
 
@@ -59,4 +60,12 @@ Imágenes descargadas.
 `docker rm $(docker ps -aq)` (Elimina todos, absolutamente todos)  
 
 
+### Ejecutar programas en el contenedor 
+`docker exec <ID> bash` (OJO, requiere que se esté ejecutando) 
+`docker run -di debian` (detached e intractivo) 
+`docker exec <ID> uname -a` (ejecuta el comando "uname -a") 
+`docker exec -it <ID> bash` (ejecuta bash en el container y entra al terminal) 
+
+
+### Copiar datos al container y viceversa 
 
