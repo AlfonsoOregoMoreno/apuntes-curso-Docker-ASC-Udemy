@@ -9,7 +9,7 @@
 `docker run debian:bullseye`  
 
 **NOTA:** versiones --> "contenedor:tag"  
-**NOTA:** ver en la Doc el caso de (slim) "Image Variant". p.e.: debian:<suite>-slim 
+**NOTA:** ver en la Doc el caso de (slim) "Image Variant". p.e.: debian:<suite>-slim  
 
 `docker ps` (y "docker ps -a") 
 Containers en ejecución y (-a) los ya terminados tb. 
@@ -21,24 +21,36 @@ Imágenes descargadas.
 
 **DUDA:** cómo cambiar el Registry al que se apunta. 
 
-### **Asignar nombres y hacerlos interactivos** 
+
+### Asignar nombres y hacerlos interactivos 
 `docker run -it debian bash`  
 
 **NOTA:** los SSOO de los containers no son completos. Podemos comprobar que le faltarán muchos comandos/paquetes.  
 
 `docker run -it --name miconten debian bash`  
 
+
 ### Dejar en 2º plan, obtener info; ayuda y stop 
 `docker run -d httpd` (Apache)  
-`docker inspect <hash>` (info en JSON) 
+`docker inspect <hash>` (info en JSON)  
 `docker inspect <nombre>`  
-
 `docker stop <hash | nombre>`  
-
 `docker --help`  
-
 `docker <comando> --help` 
-> Ej.: `docker run --help` 
+> Ej.: `docker run --help`  
+**NOTA:** revisar las opciones que brindan los comandos. 
+
+
+### Docker ps en más detalle 
+`docker ps -l` (ver los últimos)  
+`docker ps -n3` (ver los últimos 3)  
+`docker ps -q` (los hashes)  
+`docker ps -s` (sizes)  
+`docker ps -f` (filtro; ¡¡Ver la Doc!!) 
+> Ej.: `docker ps -f "name=a"` (contiene una "a" en el nombre)  
+`docker ps -f "image=http"` (¡¡OJO!! esto dio error)  
+`docker ps --format "{{.ID}}:{{.Command}}"` (formateo; ID y Command son campos/columnas; Ojo con la doble llave; Ver la Doc) 
+(podemos poner "table" antes de las 2 primeras llaves para que salgan las cabeceras)  
 
 
 
