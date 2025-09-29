@@ -53,4 +53,10 @@ Imágenes descargadas.
 (podemos poner "table" antes de las 2 primeras llaves para que salgan las cabeceras)  
 
 
+### Borrar contenedores
+`docker rm <hash | nombre>` (solo puede eliminar los terminados)  
+`docker stop $(docker ps -q)` (detiene los arrancados ya que el comando entre paréntesis devuelve todos los IDs de los arrancados)  
+`docker rm $(docker ps -aq)` (Elimina todos, absolutamente todos)  
+
+
 
